@@ -24,7 +24,7 @@ ThisBuild / homepage := Some(url("http://openurp.github.io/lixin-edu-core/index.
 
 val apiVer = "0.44.1"
 val starterVer = "0.3.59"
-val eduCoreVer = "0.3.13-SNAPSHOT"
+val eduCoreVer = "0.3.13"
 val openurp_edu_api = "org.openurp.edu" % "openurp-edu-api" % apiVer
 val openurp_std_api = "org.openurp.std" % "openurp-std-api" % apiVer
 val openurp_stater_ws = "org.openurp.starter" % "openurp-starter-ws" % starterVer
