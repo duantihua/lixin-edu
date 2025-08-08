@@ -20,6 +20,7 @@ package net.openurp.lixin.edu
 import net.openurp.lixin.edu.course.service.*
 import net.openurp.lixin.edu.program.service.*
 import org.beangle.commons.cdi.BindModule
+import org.openurp.edu.program.service.checkers.{CourseHourPlanChecker, MajorCourseDocChecker, OptionalCreditHourPlanChecker, TermsPlanChecker}
 import org.openurp.edu.program.service.impl.DefaultProgramChecker
 
 class DefaultModule extends BindModule {
@@ -35,6 +36,11 @@ class DefaultModule extends BindModule {
     bind("PlanChecker.majorOptional", classOf[MajorOptionalPlanChecker])
     bind("PlanChecker.stage", classOf[StagePlanChecker])
     bind("PlanChecker.creditStat", classOf[CreditStatPlanChecker])
+
+    bind("PlanChecker.optionalCreditHour", classOf[OptionalCreditHourPlanChecker])
+    bind("PlanChecker.courseHour", classOf[CourseHourPlanChecker])
+    bind("PlanChecker.terms", classOf[TermsPlanChecker])
+    bind("DocChecker.majorCourse", classOf[MajorCourseDocChecker])
 
     bind("ProgramChecker.lixin", classOf[DefaultProgramChecker])
       .property("planCheckers",
